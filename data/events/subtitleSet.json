@@ -1,0 +1,14 @@
+{
+    "params": [
+        {
+            "name": "SubtitleText",
+            "type": "String",
+            "defaultValue": ""
+        },
+        {
+            "name": "SubtitleColor",
+            "type": "ColorWheel",
+            "defaultValue": "0xFFFFFFFF"
+        }
+    ]
+}

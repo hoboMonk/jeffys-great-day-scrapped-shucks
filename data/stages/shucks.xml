@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-stage>
+<stage startCamPosX="200" startCamPosY="200" folder="stages/shucks/" zoom="0.6" name="shucks">
+	<sprite x="-425" sprite="stage 3" y="-168" type="none" scale="1.4" name="bg"/>
+	<girlfriend x="600" scroll="1" y="-50"/>
+	<dad x="-83.5404233755466" y="0"/>
+	<boyfriend x="1127.90670041506" y="140.573423068228"/>
+	<sprite x="-425" sprite="stage 2" y="-168" type="none" scale="1.4" name="light"/>
+	<sprite x="-425" sprite="stage 1" y="-168" type="none" scale="1.4" name="shadow"/>
+</stage>

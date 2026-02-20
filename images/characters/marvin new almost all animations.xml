@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="marvin new almost all animations.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="idle0000" x="534" y="0" width="444" height="791" frameX="-955" frameY="-1205" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="singLEFT0000" x="0" y="0" width="534" height="782" frameX="-841" frameY="-1215" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="singLEFT0001" x="0" y="782" width="513" height="790" frameX="-862" frameY="-1209" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="singDOWN0000" x="1873" y="0" width="468" height="730" frameX="-935" frameY="-1269" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="singDOWN0001" x="0" y="1572" width="448" height="739" frameX="-946" frameY="-1258" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="singRIGHT0000" x="978" y="0" width="478" height="728" frameX="-974" frameY="-1264" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="singRIGHT0001" x="1873" y="730" width="464" height="732" frameX="-974" frameY="-1262" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="singUP0000" x="978" y="728" width="412" height="844" frameX="-961" frameY="-1155" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="singUP0001" x="1456" y="0" width="417" height="825" frameX="-964" frameY="-1172" frameWidth="2300" frameHeight="2300"/>
+</TextureAtlas>

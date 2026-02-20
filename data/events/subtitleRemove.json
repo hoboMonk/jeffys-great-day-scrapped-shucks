@@ -1,0 +1,9 @@
+{
+    "params": [
+        {
+            "name": "FadeTime",
+            "type": "Float(0.25, 9999, 0.25, 2)",
+            "defaultValue": "0.75"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="rose.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="Idle0000" x="0" y="0" width="1251" height="1009" frameX="-669" frameY="-976" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="dead0000" x="1251" y="0" width="1269" height="993" frameX="-651" frameY="-976" frameWidth="2300" frameHeight="2300"/>
+</TextureAtlas>

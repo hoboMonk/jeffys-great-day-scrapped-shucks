@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="-700" y="-740" sprite="marvin new almost all animations" scale="0.6" antialiasing="false" flipX="true" camx="-70" camy="280" isPlayer="true">
+	<anim name="idle" anim="idle" fps="6" loop="true"/>
+	<anim name="singDOWN" anim="singDOWN" fps="16"/>
+	<anim name="singRIGHT" anim="singRIGHT" fps="16"/>
+	<anim name="singLEFT" anim="singLEFT" fps="16"/>
+	<anim name="singUP" anim="singUP" fps="16"/>
+</character>

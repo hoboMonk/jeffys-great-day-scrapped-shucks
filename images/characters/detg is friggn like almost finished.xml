@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="detg is friggn like almost finished.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="idle0000" x="0" y="4395" width="1046" height="1866" frameX="-635" frameY="-395" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="singDOWN0000" x="5043" y="0" width="1605" height="1531" frameX="-222" frameY="-744" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="singDOWN0001" x="5043" y="1531" width="1604" height="1524" frameX="-219" frameY="-752" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="singLEFT0000" x="3304" y="0" width="1739" height="1789" frameX="-35" frameY="-466" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="singLEFT0001" x="1574" y="0" width="1730" height="1809" frameX="-50" frameY="-449" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="singRIGHT0000" x="3304" y="1789" width="1588" height="1746" frameX="-601" frameY="-508" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="singRIGHT0001" x="1574" y="1809" width="1587" height="1687" frameX="-576" frameY="-568" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="singUP0000" x="0" y="2192" width="1473" height="2203" frameX="-294" frameY="-52" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="singUP0001" x="0" y="0" width="1574" height="2192" frameX="-227" frameY="-64" frameWidth="2300" frameHeight="2300"/>
+</TextureAtlas>

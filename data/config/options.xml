@@ -1,0 +1,7 @@
+<menu name="shucks specific options" desc="options for the shucks fanmod">
+
+    <checkbox id="subtitles" name="subtitles" desc="If turned off, all subtitles will be disable. Keep off if you hate subtitles."/>
+    <checkbox id="mechanics" name="mechanics" desc="If turned off, mechainics such as the 15 misses mechainic will be disabled. Keep off if you suck."/>
+    <checkbox id="shaders" name="shaders" desc="If turned off, all shaders will be disabled. Keep off if you hate shaders."/>
+
+</menu>

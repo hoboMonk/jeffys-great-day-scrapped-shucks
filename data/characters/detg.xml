@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="-1000" y="-700" sprite="detg is friggn like almost finished" scale="0.6" antialiasing="false" camx="70" camy="10">
+	<anim name="idle" anim="idle" fps="6" loop="true"/>
+	<anim name="singDOWN" anim="singDOWN" fps="16"/>
+	<anim name="singRIGHT" anim="singRIGHT" fps="16"/>
+	<anim name="singLEFT" anim="singLEFT" x="100" fps="16"/>
+	<anim name="singUP" anim="singUP" fps="16"/>
+</character>
