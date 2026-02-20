@@ -1,7 +1,7 @@
 # shucks_fanmod
 this truely is the shucks fanmod of all time
 
-# you need codename engine 1.01 to play this
+# you need codename engine to play this (at least version 1.01)
 download that and put this folder in the mods folder to play
 any other engine aint gonna work
 
