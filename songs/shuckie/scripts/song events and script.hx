@@ -34,8 +34,8 @@ function postCreate()
     bottomBlackBar.camera = camNote;
     FlxG.state.insert(1, topBlackBar);
     FlxG.state.insert(1, bottomBlackBar);
-    strumLines.members[0].characters[0].cameraOffset.set(-1940, 70);
-    strumLines.members[1].characters[0].cameraOffset.set(-1490, 500);
+    strumLines.members[0].characters[0].cameraOffset.set(-2040, -100);
+    strumLines.members[1].characters[0].cameraOffset.set(-1590, 500);
     strumLines.members[0].characters[1].x = 2000;
     strumLines.members[1].characters[1].x = 1800;
     strumLines.members[0].characters[1].y = 60;
@@ -99,15 +99,13 @@ function beatHit(curBeat:Int)
         case 56:
         FlxTween.tween(camNote, {y: 0}, 2, {ease: FlxEase.cubeOut});
         FlxTween.tween(camNote, {alpha: 1}, 2.5, {ease: FlxEase.cubeOut});
-        FlxTween.tween(camHUD, {y: 0}, 2, {ease: FlxEase.cubeOut});
-        FlxTween.tween(camHUD, {alpha: 1}, 2.5, {ease: FlxEase.cubeOut});
+        camHUD.y = 0;
         case 60: 
         if (FlxG.save.data.mechanics) {
         remove(missWarn);
         }
         case 126:
         FlxTween.tween(camNote, {alpha: 0}, 0.7, {ease: FlxEase.cubeIn});
-        FlxTween.tween(camHUD, {alpha: 0}, 0.7, {ease: FlxEase.cubeIn});
         case 140:
         FlxTween.tween(camNote, {alpha: 1}, 1.4, {ease: FlxEase.cubeIn});
         FlxTween.tween(camHUD, {alpha: 1}, 1.4, {ease: FlxEase.cubeIn});

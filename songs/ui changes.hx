@@ -16,7 +16,6 @@ doIconBop = false;
 function postCreate()
 {
     add(timetext);
-    trace(timetext.x);
     FlxG.cameras.insert(camOther, 1, false).bgColor = FlxColor.TRANSPARENT;
     FlxG.cameras.insert(camNote, 1, false).bgColor = FlxColor.TRANSPARENT;
     camNote.downscroll = Options.downscroll;

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="MarvinDark.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="idle0000" x="444" y="0" width="227" height="147" frameX="-990" frameY="-1254" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="idle0001" x="219" y="0" width="225" height="150" frameX="-990" frameY="-1251" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="left0000" x="242" y="345" width="230" height="94" frameX="-825" frameY="-1301" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="left0001" x="219" y="150" width="213" height="95" frameX="-848" frameY="-1301" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="down0000" x="0" y="458" width="249" height="74" frameX="-937" frameY="-1419" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="down0001" x="219" y="245" width="225" height="89" frameX="-949" frameY="-1390" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="up0000" x="0" y="170" width="206" height="175" frameX="-987" frameY="-1134" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="up0001" x="0" y="0" width="219" height="170" frameX="-980" frameY="-1165" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="right0000" x="0" y="345" width="242" height="113" frameX="-1178" frameY="-1340" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="right0001" x="444" y="147" width="227" height="124" frameX="-1162" frameY="-1322" frameWidth="2300" frameHeight="2300"/>
+</TextureAtlas>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="DbtgDark.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="DbtgDarkIdle0000" x="0" y="264" width="214" height="123" frameX="-982" frameY="-377" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="DbtgDarkIdle0001" x="201" y="0" width="218" height="124" frameX="-979" frameY="-378" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="DbtgDarkLeft0000" x="0" y="136" width="210" height="128" frameX="-887" frameY="-392" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="DbtgDarkLeft0001" x="0" y="0" width="201" height="136" frameX="-901" frameY="-384" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="DbtgDarkUp0000" x="419" y="103" width="207" height="107" frameX="-988" frameY="-286" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="DbtgDarkUp0001" x="419" y="0" width="219" height="103" frameX="-980" frameY="-305" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="DbtgDarkDown0000" x="241" y="387" width="258" height="84" frameX="-996" frameY="-523" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="DbtgDarkDown0001" x="0" y="387" width="241" height="91" frameX="-994" frameY="-504" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="DbtgDarkRight0000" x="419" y="210" width="134" height="139" frameX="-1175" frameY="-423" frameWidth="2300" frameHeight="2300"/>
+	<SubTexture name="DbtgDarkRight0001" x="210" y="136" width="146" height="126" frameX="-1150" frameY="-429" frameWidth="2300" frameHeight="2300"/>
+</TextureAtlas>

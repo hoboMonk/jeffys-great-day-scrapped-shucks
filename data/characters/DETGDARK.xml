@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="-900" y="-580" sprite="DbtgDark" scale="0.6" camx="400" camy="200" icon="detg" color="#000000">
+	<anim name="idle" anim="DbtgDarkIdle" x="-1.67" fps="2" loop="true"/>
+	<anim name="singDOWN" anim="DbtgDarkDown" x="-20" y="-136.67" fps="16"/>
+	<anim name="singRIGHT" anim="DbtgDarkRight" x="-218.34" y="53.33" fps="16"/>
+	<anim name="singLEFT" anim="DbtgDarkLeft" x="165" y="1.67" fps="16"/>
+	<anim name="singUP" anim="DbtgDarkUp" x="-18.33" y="115" fps="16"/>
+</character>
