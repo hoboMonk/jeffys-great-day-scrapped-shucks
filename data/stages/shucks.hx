@@ -13,6 +13,8 @@ photos.alpha = 0;
 wall.alpha = 0;
 wall.x = -1100;
 wall.y = -100;
+
+strumLines.members[0].characters[0].visible = strumLines.members[0].characters[1].visible = strumLines.members[1].characters[0].visible = strumLines.members[1].characters[1].visible = false;
 }
 
 function beatHit(curBeat:Int) {
@@ -28,7 +30,11 @@ function beatHit(curBeat:Int) {
         for (e in [shadow, light, bg, strumLines.members[0].characters[0], strumLines.members[1].characters[0], strumLines.members[2].characters[0]]) {
             FlxTween.tween(e, {alpha: 1}, 0.2, {ease: FlxEase.cubeOut});  
         }   
+        strumLines.members[0].characters[0].visible = strumLines.members[1].characters[0].visible = true;
+        strumLines.members[0].characters[2].visible = strumLines.members[1].characters[2].visible = false;
         case 1072:
+        strumLines.members[0].characters[0].visible = strumLines.members[1].characters[0].visible = false;
+        strumLines.members[0].characters[1].visible = strumLines.members[1].characters[1].visible = true;
         FlxG.state.insert(2, photos);
         FlxG.state.insert(1, wall);
         photos.alpha = 1;
@@ -37,6 +43,5 @@ function beatHit(curBeat:Int) {
         remove(bg);
         remove(light);
         remove(shadow);
-        FlxG.state.insert(3, placeholder);
     }
 }

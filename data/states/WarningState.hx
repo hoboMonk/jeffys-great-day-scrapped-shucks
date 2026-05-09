@@ -1,0 +1,3 @@
+function create() {
+    disclaimer.text = "*HEY READ ME!* \n\n This is a scrapped build of #Jeffy's Great Day# back when the mod was originally supposed to be a Shucks Oneshot Mod.\nThis means that all the assets shown are\n*SCRAPPED AND WONT BE USED!*\n\nIf you want to use any assets here\n#please credit either Hobo or Spike!#\nAlso check out the options, there extra options there..\n\n#With that out the way Enjoy the Mod!#";
+}

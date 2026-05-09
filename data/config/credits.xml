@@ -1,0 +1,17 @@
+<menu name="Mod Credits" desc="The people who made the mod!">
+
+    <credit name="Spike" desc="Director, Artist" size="130" url="https://spekelol.straw.page/"/>
+
+    <credit name="Hobo" desc="Coder, Charter, UI Artist" size="130" url="https://www.youtube.com/@mischievous_face9"/>
+
+    <credit name="Vibre" desc="Composer" size="130" url="https://www.youtube.com/@VibreProds"/>
+
+</menu>
+
+<menu name="Special Thanks" desc="Its in the name">
+
+    <credit name="silly borja" desc="Referenced some code off of their's" size="130" url="https://www.youtube.com/channel/UCXIGMU_N0mnx8G138S-WgKA"/>
+
+    <credit name="stryk" desc="Made the V-Slice Sustain Code" size="130" url="https://x.com/StrYk85"/>
+
+</menu>

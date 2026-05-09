@@ -1,47 +1,38 @@
 import flixel.text.FlxText.FlxTextBorderStyle;
 import openfl.text.TextField;
 
-public var subtitle:FlxText = new FlxText(0, 0, 0, "", 55);
-public var subBG = new FunkinSprite(0, 0).makeSolid(100, 50, FlxColor.BLACK);
-var subCam:FlxCamera;
-subtitle.setFormat(Paths.font("Arial Black.ttf"), 35, FlxColor.WHITE, "center", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+public var subtitle = new FunkinText(0, 490, 0, "", 40);
+public var subBG = new FunkinSprite(0, 495).makeSolid(100, 56, FlxColor.BLACK);
+subtitle.setFormat(Paths.font("Arial Black.ttf"), 40, FlxColor.WHITE, "center", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 
 function postCreate(){
     if(FlxG.save.data.subtitles)  {
-    subCam= new HudCamera();
+    var subCam = new HudCamera();
+    subtitle.camera = subBG.camera = subCam;
     subCam.bgColor = 0x00000000;
     FlxG.cameras.add(subCam, false);
-    subtitle.camera = subCam;
     subtitle.borderSize = 3;
-
-    subBG.alpha = 0; 
-    subBG.scrollFactor.set();
-    subBG.camera = subCam;
-    subBG.screenCenter();
-    subBG.y = 494;
+    subBG.alpha = 0;
+    add(subBG);
+    add(subtitle);
     }
 }
 
 function onEvent(eventEvent) {
 
     if (eventEvent.event.name == "subtitleSet" && FlxG.save.data.subtitles) {
-        remove(subtitle);
-        FlxTween.cancelTweensOf(subtitle, ['alpha']);
-        FlxTween.cancelTweensOf(subtitle.scale);
-        FlxTween.cancelTweensOf(subBG, ['alpha']);
-        FlxTween.cancelTweensOf(subBG.scale);
+        for (a in [subtitle, subBG]) {
+            FlxTween.cancelTweensOf(a, ['alpha']);
+            FlxTween.cancelTweensOf(a.scale);
+        }
         subtitle.scale.set(1.05, 1.05);
+        FlxTween.tween(subtitle.scale, {x: 1, y: 1}, 0.5, {ease: FlxEase.circOut});
         subtitle.alpha = 1;
         subBG.alpha = 0.5;
-        FlxTween.tween(subtitle.scale, {x: 1, y: 1}, 0.5, {ease: FlxEase.cubeOut});
         subtitle.text = eventEvent.event.params[0];
         subtitle.color = eventEvent.event.params[1];
-        FlxG.state.insert(1, subBG);
-        add(subtitle);
-        subBG.scale.x = subtitle.fieldWidth + 50;
-        subBG.scale.x = subBG.scale.x * 1.05;
-        FlxTween.tween(subBG.scale, {x: subBG.scale.x * 0.95}, 0.5, {ease: FlxEase.cubeOut});
-        subtitle.screenCenter();
-        subtitle.y = 490;
+        subBG.scale.x = subtitle.fieldWidth + 35;
+        for (a in [subtitle, subBG]) a.screenCenter(FlxAxes.X);
+        FlxTween.tween(subBG.scale, {x: subtitle.fieldWidth + 15}, 0.5, {ease: FlxEase.circOut});
     }
 }

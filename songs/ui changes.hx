@@ -18,18 +18,26 @@ function postCreate()
     add(timetext);
     FlxG.cameras.insert(camOther, 1, false).bgColor = FlxColor.TRANSPARENT;
     FlxG.cameras.insert(camNote, 1, false).bgColor = FlxColor.TRANSPARENT;
-    camNote.downscroll = Options.downscroll;
-    camOther.downscroll = Options.downscroll;
+    camNote.downscroll = camOther.downscroll = Options.downscroll;
     strumLines.members[0].camera = strumLines.members[1].camera = camNote;
     timetext.camera = camOther;
     iconP1.scrollFactor.set(1, 1);
 iconP2.scrollFactor.set(1, 1);
 updateIconPositions = () -> {
-    iconP1.y = 570;
-    iconP2.y = 570;
+    iconP1.x = 890;
+    iconP2.x = 230;
+    iconP1.y = iconP2.y = 570;
     iconP1.health = healthBar.percent / 100;
     iconP2.health =  1 - (healthBar.percent / 100);
 };
+
+for (a in [scoreTxt, missesTxt, accuracyTxt]) {
+        a.setFormat(Paths.font("Arial Black.ttf"), 19);
+        a.y = 667;
+    }
+    accuracyTxt.x = 360;
+    missesTxt.x = 395;
+    scoreTxt.x = 390;
 }
 
 function beatHit() {
@@ -39,16 +47,18 @@ function beatHit() {
     }
 }
 
+public function flipIcons() {
+    updateIconPositions = () -> {
+        iconP1.x = 230;
+        iconP2.x = 890;
+    };
+    iconP1.flipX = iconP2.flipX = healthBar.flipX = true;
+}
+
 function postUpdate()
 {
-    iconP1.x = !healthbarFlip ? 890 : 240;
-    iconP2.x = !healthbarFlip ? 230 : 900;
-    iconP1.flipX = iconP2.flipX = healthBar.flipX = healthbarFlip;
-
-    camNote.zoomMultiplier = camHUD.zoomMultiplier;
-    camNote.zoom = camHUD.zoom;
-    camOther.zoomMultiplier = camHUD.zoomMultiplier;
-    camOther.zoom = camHUD.zoom;
+    camNote.zoomMultiplier = camOther.zoomMultiplier = camHUD.zoomMultiplier;
+    camNote.zoom = camOther.zoom = camHUD.zoom;
 
     if (inst != null && timetext != null) {
         var timeRemain = Std.int((inst.length - Conductor.songPosition) / 1000);
