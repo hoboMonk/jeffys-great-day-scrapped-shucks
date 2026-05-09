@@ -11,21 +11,25 @@ var canSelect:Bool = true;
 function create() {
     CoolUtil.playMenuSong();
 
-    var title = new FunkinText(570, 30, 0, "JEFFY's gREAT DAY\nshucks scrapped build", 50);
-    title.alignment = "right";
+    title = new FunkinText(0, 10, 0, "JEFFY's gREAT DAY\nshucks scrapped build", 45);
+    title.alignment = "left";
     add(title);
 
-    var author = new FunkinText(820, 670, 0, "made by spike and hobo", 30);
+    author = new FunkinText(820, 10, 0, "made by spike and hobo", 30);
     add(author);
 
     title.font = author.font = Paths.font("ransom2.ttf");
+
+    render = new FlxSprite(300, -250, Paths.image("menus/cool little render"));
+    render.scale.set(0.55, 0.55);
+    add(render);
 
 
     buttons = new FlxGroup();
     add(buttons);
 
     for (i in 0...options.length) {
-        var text = new FlxText(50 + (i * 50), 100 + (i * 160), 0, options[i], 120);
+        var text = new FlxText(50 + (i * 100), 150 + (i * 160), 0, options[i], 120);
         text.font = Paths.font("ransom1.ttf");
         FlxTween.tween(text, {y: text.y + 5}, 1, {startDelay: 0.2 * i, ease: FlxEase.sineInOut, type: 4});
         buttons.add(text);
@@ -74,4 +78,11 @@ function update(elapsed:Float) {
         }
     }
     }
+}
+
+function beatHit(e) {
+    render.scale.set(0.57, 0.57);
+    render.angle = e % 2 == 0 ? 1 : -1;
+    FlxTween.tween(render.scale, {x: 0.55, y: 0.55}, (Conductor.stepCrochet/1000 * 3.9), {ease: FlxEase.circOut});
+    FlxTween.tween(render, {angle: 0}, (Conductor.stepCrochet/1000 * 3.9), {ease: FlxEase.circOut});
 }
