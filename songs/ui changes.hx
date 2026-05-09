@@ -11,7 +11,6 @@ PauseSubState.script = "data/states/pause";
 
 public var camOther:HudCamera = new HudCamera();
 public var camNote:HudCamera = new HudCamera();
-doIconBop = false;
 
 function postCreate()
 {
@@ -31,6 +30,15 @@ updateIconPositions = () -> {
     iconP2.health =  1 - (healthBar.percent / 100);
 };
 
+    iconP1.bump = iconP2.bump = () -> {
+        iconP1.scale.set(1.1, 1.1);
+        iconP2.scale.set(1.1, 1.1);
+    }
+    iconP1.updateBump = iconP2.updateBump = () -> {
+        iconP1.scale.set(CoolUtil.fpsLerp(iconP1.scale.x, 1, 0.07), CoolUtil.fpsLerp(iconP1.scale.y, 1, 0.07));
+        iconP2.scale.set(CoolUtil.fpsLerp(iconP2.scale.x, 1, 0.07), CoolUtil.fpsLerp(iconP2.scale.y, 1, 0.07));
+    }
+
 for (a in [scoreTxt, missesTxt, accuracyTxt]) {
         a.setFormat(Paths.font("Arial Black.ttf"), 19);
         a.y = 667;
@@ -40,17 +48,12 @@ for (a in [scoreTxt, missesTxt, accuracyTxt]) {
     scoreTxt.x = 390;
 }
 
-function beatHit() {
-    for (icon in [iconP1, iconP2]) {
-        icon.scale.set(0.95, 0.95);
-        FlxTween.tween(icon.scale, {x: 0.85, y: 0.85}, (0.5 * (1 / (Conductor.bpm / 100))), {ease: FlxEase.circOut});
-    }
-}
-
 public function flipIcons() {
     updateIconPositions = () -> {
         iconP1.x = 230;
         iconP2.x = 890;
+        iconP1.health = healthBar.percent / 100;
+        iconP2.health =  1 - (healthBar.percent / 100);
     };
     iconP1.flipX = iconP2.flipX = healthBar.flipX = true;
 }
@@ -73,6 +76,7 @@ function onPlayerHit(e) {
         return;
 
     e.showRating = false;
+    e.showSplash = false;
 }
 
 function onSongStart() {

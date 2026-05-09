@@ -97,11 +97,9 @@ function beatHit(curBeat:Int)
         if (FlxG.save.data.shaders) {
         FlxTween.tween(test, {saturation: -50}, 0.8, {ease: FlxEase.linearIn});
         }
-        for (a in [dad, boyfriend]) FlxTween.color(a, 0.8, FlxColor.WHITE, FlxColor.BLACK, {ease: FlxEase.linear});
         case 744:
         FlxTween.tween(camNote, {alpha: 1}, 1.4, {ease: FlxEase.linearIn});
         FlxTween.tween(test, {saturation: -40}, 1.4, {ease: FlxEase.linearIn});
-        for (a in [dad, boyfriend]) FlxTween.color(a, 1, FlxColor.BLACK, FlxColor.WHITE, {ease: FlxEase.linear});
         case 814:
         FlxTween.tween(camNote, {alpha: 0}, 0.8, {ease: FlxEase.linearIn});
         for(a in strumLines.members[0].members) { FlxTween.tween(a, {x : (FlxG.width * 0.21) + (Note.swagWidth * (a.ID - 2))}, 2, {ease: FlxEase.circIn});}
@@ -111,7 +109,6 @@ function beatHit(curBeat:Int)
         FlxTween.tween(camHUD, {alpha: 1}, 1.4, {ease: FlxEase.linearIn});
         FlxTween.tween(timetext, {alpha: 1}, 1.4, {ease: FlxEase.linearIn});
         case 1068:
-        FlxTween.tween(boyfriend, {x: -400}, 1.4, {ease: FlxEase.cubeIn});
         FlxTween.tween(timetext, {y: -100}, 0.8, {ease: FlxEase.cubeIn});
         FlxTween.tween(camHUD, {alpha: 0}, 0.8, {ease: FlxEase.cubeIn});
         for(a in strumLines.members[0].members) { FlxTween.tween(a, {x : (FlxG.width * 0.8) + (Note.swagWidth * (a.ID - 2))}, 2.8, {ease: FlxEase.cubeInOut});}
@@ -121,8 +118,6 @@ function beatHit(curBeat:Int)
         case 1072:
         strumLines.members[0].characters[0].alpha = strumLines.members[1].characters[0].alpha = strumLines.members[2].characters[0].alpha = 0;
         strumLines.members[0].characters[1].alpha = strumLines.members[1].characters[1].alpha = topBlackBar.alpha = bottomBlackBar.alpha = 1;
-        FlxTween.tween(strumLines.members[0].characters[1], {x: 400}, 2.8, {ease: FlxEase.cubeOut});
-        FlxTween.tween(strumLines.members[1].characters[1], {x: -1370}, 2.8, {ease: FlxEase.cubeOut});
         FlxTween.tween(camHUD, {alpha: 1}, 2.8, {ease: FlxEase.cubeOut});
         flipIcons();
         if (FlxG.save.data.shaders) {
@@ -135,8 +130,7 @@ function beatHit(curBeat:Int)
         case 1198:
         FlxTween.tween(strumLines.members[0].characters[1], {x: -100}, 0.62, {ease: FlxEase.circIn});
         case 1200:
-        FlxTween.tween(camNote, {alpha: 0}, 0.6, {ease: FlxEase.linearIn});
-        FlxTween.tween(camHUD, {alpha: 0}, 0.6, {ease: FlxEase.linearIn});
-        FlxTween.tween(camOther, {alpha: 0}, 0.6, {ease: FlxEase.linearIn});
+        camGame.alpha = 0;
+        for (a in [camNote, camHUD, camOther]) FlxTween.tween(a, {alpha: 0}, 0.6, {ease: FlxEase.linearIn});
     }
 }
